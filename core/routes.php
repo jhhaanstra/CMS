@@ -23,6 +23,8 @@ $routes->add('home', new Route('/', ['Homepage@test']));
 
 $routes->add('admin_login', new Route('/admin',      ['main\Admin@showLogin', 'middleware' => ['authentication']]));
 $routes->add('admin_panel', new Route('/admin/panel', ['main\Admin@panel'    , 'middleware' => ['authentication']]));
+$routes->add('admin_accounts', new Route('/admin/accounts', ['main\User@show'    , 'middleware' => ['authentication']]));
+$routes->add('admin_permissions', new Route('/admin/permissions', ['main\Admin@panel'    , 'middleware' => ['authentication']]));
 
 $routes->add('auth_login',  new Route('/login',       ['auth\Authentication@login']));
 $routes->add('auth_logout', new Route('admin/logout', ['auth\Authentication@logout']));

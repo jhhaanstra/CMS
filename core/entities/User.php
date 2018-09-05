@@ -28,7 +28,7 @@ class User implements Storable
     /** @Column(type="string", length=30, unique=true) */
     private $name;
 
-    /** @Column(type="string", length=60, unique=true) */
+    /** @Column(type="string", length=60) */
     private $password;
 
     /** @Column(type="datetime") */

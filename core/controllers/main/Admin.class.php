@@ -19,11 +19,15 @@ use function WIPCMS\core\returnView;
 class Admin extends Controller {
 
     public function showLogin() : void {
-        echo returnView('login', ['page_title' => 'test title!']);
+        echo returnView('login', ['page_title' => 'Welcome to your login!']);
     }
 
     public function panel() : void {
+        echo "<pre>";
         var_dump($_SESSION);
+        echo "</pre>";
+
+        echo returnView('panel/panel', ['page_title' => 'Admin Panel']);
         echo "<a href='logout'>log out</a>";
     }
 }

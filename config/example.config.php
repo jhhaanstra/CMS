@@ -14,15 +14,18 @@ const CONFIG = [
         'default_theme' => 'chrissy'
     ],
 
+    'entities' => [__DIR__ . '/../entities'],
+
+    'templates' => [__DIR__ . '/../core/views'],
+
     'urls' => [
         'root' => 'http://localhost/CMS',
-        'public' => 'http://localhost/CMS/public'
+        'public' => 'http://localhost/CMS/public',
+        'base' => 'http://localhost'
     ],
 
     'paths' => [
-        'root' => '/your/server/CMS',
-        'themes' => '/your/server/CMS/public/themes'
-    ],
-
-    'debug' => true
+        'root' => '/var/www/html/CMS',
+        'themes' => '/var/www/html/CMS/public/themes'
+    ]
 ];

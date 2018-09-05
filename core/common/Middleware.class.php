@@ -19,12 +19,12 @@ use WIPCMS\core\middleware\Authentication;
 class Middleware {
 
     private const MIDDLEWARES = [
-        'authorization' => Authorization::class
+        'authorization' => Authorization::class,
+        'authentication' => Authentication::class
     ];
 
     // The following middleware will ALWAYS be run. Each element should be a string containing an existing key in MIDDLEWARES.
     private const DEFAULT_MIDDLEWARES = [
-        'authentication' => Authentication::class
     ];
 
     public static function checkRequest(array $request) : void {
